@@ -20,6 +20,7 @@ public class bubbleSort {
 			System.out.print(arr[i]+" ");
 			
 		}
+		//System.out.println(arr);
 	}
 
 }
