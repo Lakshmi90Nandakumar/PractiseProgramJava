@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="scenario.goibibo">
+      <class name="scenario.TestMicTEst">
         <methods>
           <include name="test"/>
         </methods>
-      </class> <!-- scenario.goibibo -->
+      </class> <!-- scenario.TestMicTEst -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
