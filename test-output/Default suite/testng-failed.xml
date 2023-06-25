@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="scenario.TestMicTEst">
+      <class name="scenario.IPhone13Excel">
         <methods>
-          <include name="test"/>
+          <include name="testIcc"/>
         </methods>
-      </class> <!-- scenario.TestMicTEst -->
+      </class> <!-- scenario.IPhone13Excel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

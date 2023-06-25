@@ -19,9 +19,10 @@ public class PrintRepeatChar {
 				if(ch[i]==ch[j])
 				{
 					count++;
+					ch[j]='$';
 				}
 			}
-			if(count>1)
+			if(count>1 && ch[i]!='$')
 			{
 				System.out.print(ch[i]+" ");
 			}

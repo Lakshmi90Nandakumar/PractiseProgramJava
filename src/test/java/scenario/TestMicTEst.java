@@ -5,6 +5,7 @@ import static org.testng.Assert.expectThrows;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -40,7 +41,7 @@ public class TestMicTEst
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);//implicit wait
 		
-		driver.findElement(By.xpath("//div[@id='mic-controls']/child::button")).click();//click on test my mic element
+		//driver.findElement(By.xpath("//div[@id='mic-controls']/child::button")).click();//click on test my mic element
 		
 		//through the robot class
 		
@@ -51,6 +52,30 @@ public class TestMicTEst
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_TAB);
 		r.keyRelease(KeyEvent.VK_ENTER);*/
+		
+		//click on test web cam link
+		
+		driver.findElement(By.xpath("//a[text()='Test Webcam']")).click();
+		
+		Set<String> allWh = driver.getWindowHandles();
+		
+		for(String wh:allWh)
+		{
+			driver.switchTo().window(wh);
+			String title=driver.getTitle();
+			if(title.contains("Webcam Test"))
+			{
+			    driver.switchTo().window(wh);
+			    System.out.println(driver.getTitle());
+			    break;
+			}
+		}
+		
+		//click on test my cam
+		
+		
+		Thread.sleep(4000);
+		driver.findElement(By.xpath("//div[@id='webcam-controls']/child::button[text()='Test my cam']")).click();
 		
 		
 	}
