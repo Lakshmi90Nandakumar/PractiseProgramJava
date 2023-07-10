@@ -1,6 +1,7 @@
 package sanjaySirProgram;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class HashMapAddition {
@@ -20,6 +21,10 @@ public class HashMapAddition {
 		int c=sc.nextInt();
 		System.out.println("Sum is: ");
 		System.out.print(hm.get(b)+hm.get(c));
+		for(Map.Entry<Integer, Integer> h:hm.entrySet())
+		{
+			System.out.println(h.getKey()+":"+h.getValue());
+		}
 	}
 
 }

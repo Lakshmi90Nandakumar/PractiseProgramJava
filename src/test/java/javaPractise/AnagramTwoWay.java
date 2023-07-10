@@ -7,7 +7,7 @@ public class AnagramTwoWay {
 
 	public static void main(String[] args) 
 	{
-		String s="acct",s1="cact";
+		String s="accwt",s1="wcact";
 		
 		char[] c1=s.toCharArray();
 		char[] c2=s1.toCharArray();
